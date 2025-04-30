@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stories by Ereshva Fatima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Arham Niyaz">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdfdfd;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background: #6c5ce7;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    main {
+      padding: 1rem;
+    }
+    .story {
+      background: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #6c5ce7;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .story h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Stories by Ereshva Fatima</h1>
+    <p>Read beautiful stories for free</p>
+  </header>
+
+  <main id="story-container">
+    <!-- Stories will appear here -->
+  </main>
+
+  <footer>
+    <p>Website developed by Arham Niyaz</p>
+    <p>&copy; 2025</p>
+  </footer>
+
+  <!-- Optional: Google AdSense script (add your own ID when approved) -->
+  <!--
+  <script data-ad-client="ca-pub-xxxxxxxx" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  -->
+
+  <script>
+    const stories = [
+      {
+        title: "The Magical Walnut",
+        content: "Once upon a time in Kashmir, a walnut glowed in the moonlight. It held the power to turn wishes into warmth during snowy winters...",
+        date: "April 30, 2025"
+      },
+      {
+        title: "The Paper Mache Prince",
+        content: "In a quiet village, a prince made of paper mache came to life every spring, spreading colors and joy wherever he danced.",
+        date: "April 28, 2025"
+      }
+    ];
+
+    const container = document.getElementById('story-container');
+    stories.forEach(story => {
+      const div = document.createElement('div');
+      div.className = 'story';
+      div.innerHTML = `<h2>${story.title}</h2><p><em>${story.date}</em></p><p>${story.content}</p>`;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
